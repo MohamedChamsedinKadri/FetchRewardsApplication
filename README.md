@@ -10,7 +10,9 @@ This app was created as part of an interview coding exercise for **Fetch Rewards
 
 ## **Screenshots**
 Here are some screenshots of the app:
+
 ![Capture d'écran 2025-02-17 132208](https://github.com/user-attachments/assets/c00b02df-578b-4c1d-87e5-a4d68a543393)
+![Capture d'écran 2025-02-17 132253](https://github.com/user-attachments/assets/d71a9cc5-3e18-460a-95ca-1dfcbae9144e)
 
 
 ---
