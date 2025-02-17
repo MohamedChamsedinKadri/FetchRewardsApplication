@@ -33,7 +33,7 @@ This app use the following dependencies:
 - **Coroutines**: For asynchronous programming.
 
 ## **Architecture**
-The app follows the **MVVM (Model-View-ViewModel)** architecture with the following components:
+The app follows the **MVVM (Model-View-ViewModel)** architecture
 
 ##**Dependency Injection**
 the app Use **Hilt** to manage dependencies.
