@@ -14,7 +14,9 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun ErrorMessage (message: String, onRetry: () -> Unit) {
     Box(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
         contentAlignment = Alignment.Center
     )
     {

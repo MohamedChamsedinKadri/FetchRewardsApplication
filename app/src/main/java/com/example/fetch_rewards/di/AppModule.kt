@@ -16,13 +16,13 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideApiService(): ApiService{
+    fun provideApiService(): ApiService {
         return RetrofitClient.apiService
     }
 
     @Provides
     @Singleton
-    fun provideItemRepository(apiService: ApiService): ItemRepository{
+    fun provideItemRepository(apiService: ApiService): ItemRepository {
         return ItemRepository(apiService)
     }
 

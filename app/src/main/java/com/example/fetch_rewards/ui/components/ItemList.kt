@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -31,9 +32,9 @@ fun ItemList (items: List<Item>){
                 )
                 Divider()
             }
-            items(itemList){ item ->
-                if (item.name != null && item.name.isNotBlank()){
-                    Column (
+            items(listItems) { item ->
+                if (item.name != null && item.name.isNotBlank()) {
+                    Column(
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(16.dp)
@@ -41,9 +42,9 @@ fun ItemList (items: List<Item>){
                         Text(text = "Name: ${item.name}")
                     }
                     Divider()
-                    }
                 }
-
             }
+
+        }
     }
 }

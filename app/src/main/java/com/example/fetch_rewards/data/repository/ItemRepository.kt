@@ -6,10 +6,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 class ItemRepository (private val apiService: ApiService){
-    suspend fun getItems(): List<Item> = withContext(Dispatchers.IO) {
+    suspend fun getProcessedItems(): List<Item> = withContext(Dispatchers.IO) {
         val items = apiService.getItems()
-        items.filter { it.name.isNullOrBlank() }
-              .sortedWith(compareBy<Item> { it.listId }.thenBy { it.name })}
+        items.filter { ! it.name.isNullOrBlank() }
+            .sortedWith(compareBy({ it.listId }, { it.name }))
     }
-
-
+}
