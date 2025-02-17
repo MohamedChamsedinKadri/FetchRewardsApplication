@@ -46,10 +46,11 @@ class MainActivity : ComponentActivity() {
                     if (isLoading) {
                         LoadingIndicator()
                     } else if (error != null) {
-                        ErrorMessage(message = error) {
-                            viewModel.fetchItems()
-                        }
-                    } else{
+                        ErrorMessage(
+                            message = error,
+                            onRetry = { viewModel.fetchItems() }
+                        )
+                    } else {
                         ItemList(items = items)
                     }
 

@@ -9,6 +9,7 @@ class ItemRepository (private val apiService: ApiService){
     suspend fun getProcessedItems(): List<Item> = withContext(Dispatchers.IO) {
         val items = apiService.getItems()
         items.filter { ! it.name.isNullOrBlank() }
-            .sortedWith(compareBy({ it.listId }, { it.name }))
+            .sortedWith(compareBy<Item> { it.listId }
+                .thenBy { it.name?.replace("Item ", "")?.toIntOrNull() ?: 0 })
     }
 }
