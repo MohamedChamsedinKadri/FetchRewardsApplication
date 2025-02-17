@@ -1,4 +1,10 @@
 package com.example.fetch_rewards
 
-class FetchRewardsApplication {
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+
+@HiltAndroidApp
+class FetchRewardsApplication : Application() {
+
 }
